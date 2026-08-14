@@ -38,7 +38,7 @@ def load_two_columns(path):
 
 
 def validate(x, y):
-    """Return a list of problems; an empty list means the submission is valid."""
+    """Return a list of problems with the submission."""
     problems = []
     if not np.all(x == np.round(x)):
         problems.append('x values are not integers')
@@ -71,7 +71,7 @@ def verdict(value):
 
 
 def apply_style(mpl):
-    """Plain dark style, no external style file and no LaTeX."""
+    """Plain dark style."""
     mpl.rcParams.update({
         'text.usetex': False,
         'figure.facecolor': '#0a0a0a', 'axes.facecolor': '#1a1a1a',
@@ -82,8 +82,7 @@ def apply_style(mpl):
 
 
 def plot_submission(x, y, in_sample_csv, scores):
-    """Draw the published data and the submission. The withheld continuation is
-    never drawn, so the plot can be shared without giving anything away."""
+    """Draw the published data and the submission."""
     import matplotlib as mpl
     import matplotlib.pyplot as plt
     apply_style(mpl)

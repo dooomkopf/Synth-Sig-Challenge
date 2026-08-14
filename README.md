@@ -28,11 +28,11 @@ The error metric is the L1 distance, `L1 = mean(|y_model - y_data|)`. Each submi
 
 Points below x = 394 are neither published nor scored.
 
-A submission is valid if the CSV contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value, and no missing, duplicate or non-numeric entries. Model and data are compared point by point. Nothing is interpolated, resampled or filled in on my side, so a submission on a different grid cannot be scored and does not count.
+A submission is valid if the CSV contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value. Model and data are compared point by point, on that grid.
 
 Qualification threshold: in-sample L1 ≤ 0.02 and out-of-sample L1 ≤ 0.02.
 
-Ranking among the qualified submissions is by out-of-sample L1. In-sample L1 is not used for ranking, because the sample points are spaced one day apart from x = 1164 on and any flexible interpolator drives it close to zero. Combined L1 is listed for information and is used only to break ties.
+Ranking among the qualified submissions is by out-of-sample L1. The sample points are spaced one day apart from x = 1164 on, so any flexible interpolator drives the in-sample L1 close to zero, which makes it useless as a ranking criterion. Combined L1 breaks ties.
 
 The withheld continuation `synth-sig-holdout.csv` has the same two-column format `x y`, x = 6432…8000 in steps of 1, y with 10 significant digits, and the checksum
 
@@ -55,7 +55,7 @@ Fallback:
 - Send the CSV and method description via DM to @Hendrik__Z.
 - Or contact me by another channel if we already know each other.
 
-I will calculate the scores privately while the holdout remains secret, then update the participant list and ranking table here. My own demo entries, marked `[Demo]` in the title, do not count towards the three submissions required for the prize.
+I will calculate the scores privately while the holdout remains secret, then update the participant list and ranking table here. My own demo entries are marked `[Demo]` in the title and stay out of the count.
 
 ### Check your submission first
 
