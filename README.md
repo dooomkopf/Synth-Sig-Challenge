@@ -51,9 +51,8 @@ Preferred:
 3. Add a short method description.
 
 Fallback:
+Try via DM to @Hendrik__Z or chat - not shure, if this is possible
 
-- Send the CSV and method description via DM to @Hendrik__Z.
-- Or contact me by another channel if we already know each other.
 
 I will calculate the scores privately while the holdout remains secret, then update the participant list and ranking table here. My own demo entries are marked `[Demo]` in the title and stay out of the count.
 
