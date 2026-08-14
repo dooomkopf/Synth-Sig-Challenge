@@ -6,6 +6,7 @@
 import argparse
 import os
 import sys
+import warnings
 from datetime import datetime, timedelta, timezone
 
 import numpy as np
@@ -25,6 +26,13 @@ def deadline_note():
 
 
 def load_two_columns(path):
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore')
+        data = read_numbers(path)
+    return data[:, 0], data[:, 1]
+
+
+def read_numbers(path):
     try:
         data = np.loadtxt(path)
     except ValueError as exc:
@@ -34,7 +42,7 @@ def load_two_columns(path):
         raise ValueError(f'{path}: file is empty')
     if data.shape[1] != 2:
         raise ValueError(f'{path}: expected 2 columns, found {data.shape[1]}')
-    return data[:, 0], data[:, 1]
+    return data
 
 
 def validate(x, y):
