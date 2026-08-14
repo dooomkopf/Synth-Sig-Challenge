@@ -24,14 +24,13 @@ Please attach your CSV file here.
 Required format:
 
 ```text
-x y
 394 ...
 395 ...
 ...
 8000 ...
 ```
 
-The file should contain integer x values from 394 to 8000.
+Two columns separated by whitespace, no header, integer x values from 394 to 8000.
 
 
 ## Additional Notes

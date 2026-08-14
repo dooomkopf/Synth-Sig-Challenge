@@ -28,7 +28,7 @@ The error metric is the L1 distance, `L1 = mean(|y_model - y_data|)`. Each submi
 
 Points below x = 394 are neither published nor scored.
 
-A submission is valid if the CSV contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value. Model and data are compared point by point, on that grid.
+A submission is valid if the file contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value, two columns separated by whitespace, no header. Model and data are compared point by point, on that grid.
 
 Qualification threshold: in-sample L1 ≤ 0.02 and out-of-sample L1 ≤ 0.02.
 
@@ -66,8 +66,6 @@ I will calculate the scores privately while the holdout remains secret, then upd
 ```
 
 It reports missing, duplicate, non-integer or non-finite entries, so you can see whether your file is valid before you submit it. `--plot` opens a window with the published data and your curve.
-
-The out-of-sample half I score once, after the deadline.
 
 ## Participants
 

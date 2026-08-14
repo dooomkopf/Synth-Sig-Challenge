@@ -40,6 +40,8 @@ def load_two_columns(path):
 def validate(x, y):
     """Return a list of problems with the submission."""
     problems = []
+    if not np.all(np.isfinite(x)):
+        return [f'{int((~np.isfinite(x)).sum())} non-finite x values']
     if not np.all(x == np.round(x)):
         problems.append('x values are not integers')
     xi = x.astype(np.int64)
@@ -152,8 +154,7 @@ def main():
     print(f'  in-sample L1     ({n_in} points): {l1_in:.6f}   {verdict(l1_in)}')
 
     if l1_in <= GATE:
-        print(f'\nIn-sample is within the limit of {GATE}. '
-              'The out-of-sample half is scored after the deadline.')
+        print(f'\nIn-sample is within the limit of {GATE}.')
     else:
         print(f'\nNOT QUALIFIED — in-sample above the limit of {GATE}.')
 
