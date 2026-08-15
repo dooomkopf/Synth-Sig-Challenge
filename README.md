@@ -32,7 +32,8 @@ Points below x = 394 are neither published nor scored.
 
 A submission is valid if the file contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value, two columns separated by whitespace, no header. Model and data are compared point by point, on that grid.
 
-Qualification threshold: in-sample MAE ≤ 0.02 and out-of-sample MAE ≤ 0.02.
+> [!IMPORTANT]
+> **Qualification threshold:** in-sample MAE ≤ 0.02 and out-of-sample MAE ≤ 0.02.
 
 Ranking among the qualified submissions is by out-of-sample MAE. The sample points are spaced one day apart from x = 1164 on, so any flexible interpolator drives the in-sample MAE close to zero, which makes it useless as a ranking criterion. Combined MAE breaks ties.
 
