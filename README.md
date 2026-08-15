@@ -7,7 +7,7 @@ A little task: analyze the signal using methods of your choice, build a model fu
 ![signal](synth-sig.png)
 
 I know that without an incentive most people won't get their asses moving — this is about honor. But there is a prize: 
-a bottle of Michael Teschke's Spätburgunder "Mutter" 2012 — from Germany's best underground freak winemaker, who sadly gave up his craft years ago, one of my personal favorites.
+a bottle of Michael Teschke's Spätburgunder "Mutter" 2012 — from one of the best German underground freak winemaker, who sadly gave up his craft years ago, one of my personal favorites.
 
 <img src="prize-bottle.png" alt="Michael Teschke Spätburgunder Mutter 2012" width="110">
 
