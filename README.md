@@ -12,7 +12,9 @@ a bottle of Michael Teschke's Spätburgunder "Mutter" 2012 — from Germany's be
 <img src="prize-bottle.png" alt="Michael Teschke Spätburgunder Mutter 2012" width="110">
 
 
-Since probably only very, very few people will take part, I'll set a generous deadline: December 31, 2026, 23:59 CET. The timestamp of the GitHub issue counts. If you do take part, I'd like to post the winner — or rather their results — on X.
+Since probably only very, very few people will take part, I'll set a generous deadline: 
+**September 31, 2026, 23:59 CET**
+The timestamp of the GitHub issue counts. If you do take part, I'd like to post the winner — or rather their results — on X.
 
 The prize is awarded only if there are at least 3 valid submissions and the winning submission reaches an out-of-sample L1 of `0.02` or lower.
 
