@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check a Synth-Sig Challenge submission: file format and in-sample L1.
+"""Check a Synth-Sig Challenge submission: file format and in-sample MAE.
 
     ./score_submission.py my_submission.csv
 """
@@ -69,7 +69,7 @@ def validate(x, y):
     return problems
 
 
-def l1_against(reference_csv, x_sub, y_sub):
+def mae_against(reference_csv, x_sub, y_sub):
     x_ref, y_ref = load_two_columns(reference_csv)
     lookup = dict(zip(x_sub.astype(np.int64), y_sub))
     y_model = np.array([lookup[int(xr)] for xr in x_ref])
@@ -158,17 +158,17 @@ def main():
     print('format OK')
 
     in_sample_csv = os.path.join(args.data_dir, 'synth-sig.csv')
-    l1_in, n_in = l1_against(in_sample_csv, x, y)
-    print(f'  in-sample L1     ({n_in} points): {l1_in:.6f}   {verdict(l1_in)}')
+    mae_in, n_in = mae_against(in_sample_csv, x, y)
+    print(f'  in-sample MAE    ({n_in} points): {mae_in:.6f}   {verdict(mae_in)}')
 
-    if l1_in <= GATE:
+    if mae_in <= GATE:
         print(f'\nIn-sample is within the limit of {GATE}.')
     else:
         print(f'\nNOT QUALIFIED — in-sample above the limit of {GATE}.')
 
     if args.plot:
         plot_submission(x, y, in_sample_csv,
-                        {'in-sample L1': l1_in})
+                        {'in-sample MAE': mae_in})
     return 0
 
 

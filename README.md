@@ -16,25 +16,25 @@ Since probably only very, very few people will take part, I'll set a generous de
 **September 30, 2026, 23:59 CET**
 The timestamp of the GitHub issue counts. If you do take part, I'd like to post the winner — or rather their results — on X.
 
-The prize is awarded only if there are at least 3 valid submissions and the winning submission reaches an out-of-sample L1 of `0.02` or lower.
+The prize is awarded only if there are at least 3 valid submissions and the winning submission reaches an out-of-sample MAE of `0.02` or lower.
 
 The signal was not generated in an absurdly complex way, but it's not trivial either — otherwise it wouldn't be a challenge.
 
 ## Scoring
 
-The error metric is the L1 distance, `L1 = mean(|y_model - y_data|)`. Each submission gets three numbers:
+The error metric is the mean absolute error, `MAE = mean(|y_model - y_data|)`. Each submission gets three numbers:
 
-- **In-sample L1** — at the 5293 published sample points (x = 394…6431)
-- **Out-of-sample L1** — on the daily grid x = 6432…8000 (1569 points), against the withheld continuation
-- **Combined L1** — `0.5 * (in-sample L1 + out-of-sample L1)`
+- **In-sample MAE** — at the 5293 published sample points (x = 394…6431)
+- **Out-of-sample MAE** — on the daily grid x = 6432…8000 (1569 points), against the withheld continuation
+- **Combined MAE** — `0.5 * (in-sample MAE + out-of-sample MAE)`
 
 Points below x = 394 are neither published nor scored.
 
 A submission is valid if the file contains every integer x from 394 to 8000, that is 7607 rows, each with one numeric y value, two columns separated by whitespace, no header. Model and data are compared point by point, on that grid.
 
-Qualification threshold: in-sample L1 ≤ 0.02 and out-of-sample L1 ≤ 0.02.
+Qualification threshold: in-sample MAE ≤ 0.02 and out-of-sample MAE ≤ 0.02.
 
-Ranking among the qualified submissions is by out-of-sample L1. The sample points are spaced one day apart from x = 1164 on, so any flexible interpolator drives the in-sample L1 close to zero, which makes it useless as a ranking criterion. Combined L1 breaks ties.
+Ranking among the qualified submissions is by out-of-sample MAE. The sample points are spaced one day apart from x = 1164 on, so any flexible interpolator drives the in-sample MAE close to zero, which makes it useless as a ranking criterion. Combined MAE breaks ties.
 
 The withheld continuation `synth-sig-holdout.csv` has the same two-column format `x y`, x = 6432…8000 in steps of 1, y with 10 significant digits, and the checksum
 
@@ -60,7 +60,7 @@ I will calculate the scores privately while the holdout remains secret, then upd
 
 ### Check your submission first
 
-`score_submission.py` in this repository checks the format and computes the in-sample L1:
+`score_submission.py` in this repository checks the format and computes the in-sample MAE:
 
 ```
 ./score_submission.py my_submission.csv
@@ -87,7 +87,7 @@ It reports missing, duplicate, non-integer or non-finite entries, so you can see
 
 Lower is better. The marked column decides the ranking.
 
-| Rank | Participant | 🏆 **OUT-OF-SAMPLE L1** | In-Sample L1 | Combined L1 | Prize eligible |
+| Rank | Participant | 🏆 **OUT-OF-SAMPLE MAE** | In-Sample MAE | Combined MAE | Prize eligible |
 |------|-------------|-------------------------|--------------|-------------|----------------|
 | 1 | – | **–** | – | – | – |
 | 2 | – | **–** | – | – | – |
