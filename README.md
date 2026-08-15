@@ -7,7 +7,7 @@ A little task: analyze the signal using methods of your choice, build a model fu
 ![signal](synth-sig.png)
 
 I know that without an incentive most people won't get their asses moving — this is about honor. But there is a prize: 
-a bottle of Michael Teschke's Spätburgunder "Mutter" 2012 — made by one of Germany’s best underground freak winemakers, who sadly gave up his craft years ago and one of my personal favorites.
+a bottle of Michael Teschke's Spätburgunder "Mutter" 2012 — made by one of Germany’s best underground freak winemakers, who sadly gave up his craft years ago. One of my personal favorites.
 
 <img src="prize-bottle.png" alt="Michael Teschke Spätburgunder Mutter 2012" width="110">
 
@@ -54,7 +54,7 @@ Preferred:
 3. Add a short method description.
 
 Fallback:
-Try via DM to @Hendrik__Z or chat - not shure, if this is possible
+Try via DM to @Hendrik__Z or chat - not sure if this is possible
 
 
 I will calculate the scores privately while the holdout remains secret, then update the participant list and ranking table here. My own demo entries are marked `[Demo]` in the title and stay out of the count.
