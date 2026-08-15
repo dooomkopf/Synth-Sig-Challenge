@@ -1,6 +1,6 @@
 # Synth-Sig Challenge
 
-Hello dear fit experts, analysts, physicists, signal processing folks, mathematicians, and everyone else!
+Hello dear fit experts and everyone else!
 
 A little task: analyze the signal using methods of your choice, build a model function, and extrapolate the sample points out to 8000. You don't have to reveal your secret weapons — all I care about are the results and a clear statement of how you composed your signal.
 
