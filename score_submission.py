@@ -14,7 +14,7 @@ import numpy as np
 X_MIN, X_MAX = 394, 8000
 N_ROWS = X_MAX - X_MIN + 1
 GATE = 0.02
-DEADLINE = datetime(2026, 12, 31, 23, 59, tzinfo=timezone(timedelta(hours=1)))
+DEADLINE = datetime(2026, 9, 30, 23, 59, tzinfo=timezone(timedelta(hours=1)))
 
 
 def deadline_note():
